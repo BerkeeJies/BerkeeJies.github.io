@@ -253,14 +253,6 @@ header .intro-text {
 	width: 300px;
 	box-shadow: 15px 0 #a7c44c;
 }
-.container {
-	color: white;
-	background: url(../assets/YEME.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
 #restaurant-menu h3 {
 	padding: 10px 0;
 	text-transform: uppercase;
@@ -275,7 +267,7 @@ header .intro-text {
 	font-size: 32px;
 	display: block;
 	font-weight: 400;
-	color: white;
+	color: black;
 	margin: 20px 0;
 	text-align: center;
 }
@@ -286,7 +278,7 @@ header .intro-text {
 #restaurant-menu .menu-item-name {
 	font-weight: 400;
 	font-size: 20px;
-	color: white;
+	color: black;
 	margin-bottom: 10px;
 }
 #restaurant-menu .menu-item-description {
@@ -296,7 +288,7 @@ header .intro-text {
 #restaurant-menu .menu-item-price {
 	float: right;
 	font-weight: 400;
-	color: white;
+	color: black;
 	margin-top: -36px;
 }
 /* Gallery Section */
