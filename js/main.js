@@ -46,8 +46,10 @@ let addItem = (objButton, id) => {
         price += 70;
     }else if(objButton.value == "Fettucine Alfredo") {
         price += 130;
-    }else if(objButton.value == "Wrap Çeşitleri") {
+    }else if(objButton.value == "Etli Wrap") {
         price += 100;
+    }else if(objButton.value == "Tavuklı Wrap") {
+        price += 80;
     }else if(objButton.value == "Bonfile") {
         price += 150;
     }else if(objButton.value == "Hamburger") {
