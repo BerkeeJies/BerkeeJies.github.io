@@ -6,8 +6,8 @@ let addItem = (objButton, id) => {
 
     console.log(price);
 
-    if(objButton.value == "Negro"){
-        price += 10;
+    if(objButton.value == "Günün Çorbası"){
+        price += 50;
     }else if(objButton.value == "Ülker ikram"){
         price += 10;
     }else if(objButton.value == "Americano"){
@@ -34,7 +34,35 @@ let addItem = (objButton, id) => {
         price += 80;
     }else if(objButton.value == "Smoothie") {
         price += 80;
+    }else if(objButton.value == "Patates Tava") {
+        price += 50;
+    }else if(objButton.value == "Combo Mix") {
+        price += 90;
+    }else if(objButton.value == "Tavuk Şiş") {
+        price += 70;
+    }else if(objButton.value == "Risotto") {
+        price += 70;
+    }else if(objButton.value == "Tavuk Sote") {
+        price += 70;
+    }else if(objButton.value == "Fettucine Alfredo") {
+        price += 130;
+    }else if(objButton.value == "Wrap Çeşitleri") {
+        price += 100;
+    }else if(objButton.value == "Bonfile") {
+        price += 150;
+    }else if(objButton.value == "Hamburger") {
+        price += 70;
+    }else if(objButton.value == "Biftek") {
+        price += 150;
+    }else if(objButton.value == "Sufle") {
+        price += 50;
+    }else if(objButton.value == "Profiterol") {
+        price += 60;
+    }else if(objButton.value == "Waffle") {
+        price += 45;
     }
+
+
     let url = `https://restaurant-app-berke.herokuapp.com/order/`;
     
     var xhr = new XMLHttpRequest();
@@ -81,8 +109,9 @@ let removeTable = async (id) => {
     xhr.send(data);
    
     //Push price to restaurant genel
-
+    let table = `order${id}`;
     document.getElementById(tablePrice).innerHTML = 0 + "₺";
+    document.getElementById(table).innerHTML = "";
 }
 
 let getOrders = async() => {
