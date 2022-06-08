@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+    <title>Ana sayfa</title>
+</head>
+
+
+<body onload="getOrders();">
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script>
+        let x = 1;
+        window.onload = getOrders();
+    </script>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Restoran Otomasyonu</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/public/home.html">Anasayfa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/public/menu.html">Menü</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/public/genel.html">Genel</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row" id="alert_placeholder">
+
+            <div class="col-8 text-center">
+                <div class="row">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Masa 1</h5>
+
+                          <p id="orderPrice1" class="card-text">0₺ </p>
+                          <p id="order1" class="card-text"></p>
+
+                          <button type="button" onclick="x = 1;" class="btn btn-success" 
+                            data-bs-toggle="modal" data-bs-target="#getOrder">
+                                Sipariş al
+                            </button>
+                          <button type="button" onclick="removeTable(1)"
+                            class="btn btn-danger">Masayı kaldır</button>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Masa 2</h5>
+                            
+                            <p id="orderPrice2" class="card-text">0₺ </p>
+                            <p id="order2" class="card-text"></p>
+
+                            <button type="button" onclick="x = 2;" class="btn btn-success" 
+                            data-bs-toggle="modal" data-bs-target="#getOrder">
+                                Sipariş al
+                            </button>
+                          <button type="button" onclick="removeTable(2)"
+                            class="btn btn-danger">Masayı kaldır</button>
+                        </div>
+                    </div>
+                        
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Masa 3</h5>
+                            
+                            <p id="orderPrice3" class="card-text">0₺ </p>
+                            <p id="order3" class="card-text"></p>
+
+                            <button type="button" onclick="x = 3;" class="btn btn-success" 
+                            data-bs-toggle="modal" data-bs-target="#getOrder">
+                                Sipariş al
+                            </button>
+                          <button type="button" onclick="removeTable(3)"
+                            class="btn btn-danger">Masayı kaldır</button>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Masa 4</h5>
+                            
+                            <p id="orderPrice4" class="card-text">0₺ </p>
+                            <p id="order4" class="card-text"></p>
+
+                            <button type="button" onclick="x = 4;" class="btn btn-success" 
+                            data-bs-toggle="modal" data-bs-target="#getOrder">
+                                Sipariş al
+                            </button>
+                          <button type="button" onclick="removeTable(4)"
+                            class="btn btn-danger">Masayı kaldır</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Masa 5</h5>
+                          
+                            <p id="orderPrice5" class="card-text">0₺ </p>
+                            <p id="order5" class="card-text"></p>
+
+                          <button type="button" onclick="x = 5;" class="btn btn-success" 
+                            data-bs-toggle="modal" data-bs-target="#getOrder">
+                                Sipariş al
+                            </button>
+                          <button type="button" onclick="removeTable(5)"
+                            class="btn btn-danger">Masayı kaldır</button>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Masa 6</h5>
+                            <p id="orderPrice6" class="card-text">0₺ </p>
+                            <p id="order6" class="card-text"></p>
+
+                          <button type="button" onclick="x = 6;" class="btn btn-success" 
+                            data-bs-toggle="modal" data-bs-target="#getOrder">
+                                Sipariş al
+                            </button>
+                          <button type="button" onclick="removeTable(6)"
+                            class="btn btn-danger">Masayı kaldır</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Masa 7</h5>
+                            <p id="orderPrice7" class="card-text">0₺ </p>
+                            <p id="order7" class="card-text"></p>
+
+                          <button type="button" onclick="x = 7;" class="btn btn-success" 
+                            data-bs-toggle="modal" data-bs-target="#getOrder">
+                                Sipariş al
+                            </button>
+                          <button type="button" onclick="removeTable(7)"
+                            class="btn btn-danger">Masayı kaldır</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Masa 8</h5>
+                            <p id="orderPrice8" class="card-text">0₺ </p>
+                            <p id="order8" class="card-text"></p>
+
+                          <button type="button" onclick="x = 8;" class="btn btn-success" 
+                            data-bs-toggle="modal" data-bs-target="#getOrder">
+                                Sipariş al
+                            </button>
+                          <button type="button" onclick="removeTable(8)"
+                            class="btn btn-danger">Masayı kaldır</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Masa 9</h5>
+                            <p id="orderPrice9" class="card-text">0₺ </p>
+                            <p id="order9" class="card-text"></p>
+
+                          <button type="button" onclick="x = 9;" class="btn btn-success" 
+                            data-bs-toggle="modal" data-bs-target="#getOrder">
+                                Sipariş al
+                            </button>
+                          <button type="button" onclick="removeTable(9)"
+                            class="btn btn-danger">Masayı kaldır</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Masa 10</h5>
+                            <p id="orderPrice10" class="card-text">0₺ </p>
+                            <p id="order10" class="card-text"></p>
+
+                          <button type="button" onclick="x = 10;" class="btn btn-success" 
+                          data-bs-toggle="modal" data-bs-target="#getOrder">
+                              Sipariş al
+                          </button>
+                        <button type="button" onclick="removeTable(10)"
+                          class="btn btn-danger">Masayı kaldır</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="getOrder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button onClick="window.location.reload();" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <button value="Negro" onclick="addItem(this, x, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Negro</li>
+                            </button>
+                            <button value="Ülker ikram" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Ülker ikram</li>
+                            </button>
+                            <button value="Americano" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Americano</li>
+                            </button>
+                            <button value="Latte" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Latte</li>
+                            </button>
+                            <button value="Pizza" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Pizza</li>
+                            </button>
+                            <button value="Hamburger" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Hamburger</li>
+                            </button>
+                            <button value="Kola" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Kola</li>
+                            </button>
+                            <button value="Makarna" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Makarna</li>
+                            </button>
+                            <button value="Ice tea" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Ice tea</li>
+                            </button>
+                            <button value="Patates Kızartması" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Patates Kızartması</li>
+                            </button>
+                            <button value="Soğan halkası" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Soğan halkası</li>
+                            </button>
+                            <button value="Türk kahvesi" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Türk kahvesi</li>
+                            </button>
+                            <button value="Frozen" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Frozen</li>
+                            </button>
+                            <button value="Smoothie" onclick="addItem(this, x);" type="button" class="btn btn-secondary">
+                                <li class="list-group-item text-center">Smoothie</li>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!--BİLDİRİMLER-->
+            <div class="col-4 text-center">
+                <div class="alert alert-info" role="alert">
+                    Restoran otomasyonuna hoşgeldiniz!
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
